@@ -11,11 +11,13 @@ class ProductRoutes {
         this.config();
     }
     config() {
-        this.router.get('/', productController_1.default.list);
-        this.router.get('/:id', productController_1.default.getOne);
-        this.router.post('/', productController_1.default.create);
-        this.router.put('/:id', productController_1.default.update);
-        this.router.delete('/:id', productController_1.default.delete);
+        this.router.get('/producto', productController_1.default.index);
+        this.router.post('/producto', productController_1.default.create);
+        // //     this.router.get('/', productController.list);
+        // //     this.router.get('/:id', productController.getOne);
+        // //     this.router.post('/', productController.create);
+        // //     this.router.put('/:id', productController.update);
+        // //     this.router.delete('/:id', productController.delete);
     }
 }
 exports.default = new ProductRoutes().router;

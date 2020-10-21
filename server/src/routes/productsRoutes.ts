@@ -1,6 +1,6 @@
 import express, { Router } from 'express';
 
-import productController from '../controllers/productController';
+import ProductController from '../controllers/productController';
 
 class ProductRoutes {
 
@@ -10,12 +10,14 @@ class ProductRoutes {
         this.config();
     }
 
-    config() {
-        this.router.get('/', productController.list);
-        this.router.get('/:id', productController.getOne);
-        this.router.post('/', productController.create);
-        this.router.put('/:id', productController.update);
-        this.router.delete('/:id', productController.delete);
+     config(): void {
+         this.router.get('/producto', ProductController.index);
+         this.router.post('/producto', ProductController.create);
+    // //     this.router.get('/', productController.list);
+    // //     this.router.get('/:id', productController.getOne);
+    // //     this.router.post('/', productController.create);
+    // //     this.router.put('/:id', productController.update);
+    // //     this.router.delete('/:id', productController.delete);
     }
 
 }
