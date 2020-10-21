@@ -1,6 +1,6 @@
 import express, { Router } from 'express';
 
-import productController from '../controller/productController';
+import productController from '../controllers/productController';
 
 class ProductRoutes {
 
