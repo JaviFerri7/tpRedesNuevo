@@ -10,7 +10,8 @@ class ProductController {
     }
 
     public create (req: Request, res: Response){
-        res.json('Creando Producto')
+
+        res.json({text: 'Creando Producto'});
     }
 }
 

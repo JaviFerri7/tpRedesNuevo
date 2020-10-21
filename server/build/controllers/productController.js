@@ -10,7 +10,7 @@ class ProductController {
         res.json('Producto');
     }
     create(req, res) {
-        res.json('Creando Producto');
+        res.json({ text: 'Creando Producto' });
     }
 }
 const productController = new ProductController;

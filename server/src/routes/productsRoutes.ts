@@ -12,7 +12,7 @@ class ProductRoutes {
 
      config(): void {
          this.router.get('/producto', ProductController.index);
-         this.router.post('/producto', ProductController.create);
+         this.router.post('/producto/create', ProductController.create);
     // //     this.router.get('/', productController.list);
     // //     this.router.get('/:id', productController.getOne);
     // //     this.router.post('/', productController.create);
