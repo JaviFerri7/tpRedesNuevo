@@ -14,14 +14,14 @@ class Server {
         this.routes();
     }
     config() {
-        this.app.set('port', 3000);
+        this.app.set('port', 3030);
         this.app.use(cors_1.default());
         this.app.use(express_1.default.json());
         this.app.use(express_1.default.urlencoded({ extended: false }));
     }
     routes() {
-        this.app.use(indexRoutes_1.default);
-        this.app.use(productsRoutes_1.default);
+        this.app.use('/', indexRoutes_1.default);
+        this.app.use('/producto', productsRoutes_1.default);
     }
     start() {
         this.app.listen(this.app.get('port'), () => {

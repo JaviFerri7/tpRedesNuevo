@@ -16,15 +16,15 @@ class Server{
     }
 
     config(): void{
-        this.app.set('port', 3000)
+        this.app.set('port', 3030)
         this.app.use(cors());
         this.app.use(express.json());   
         this.app.use(express.urlencoded({ extended: false }));
     }
 
     routes(): void{
-        this.app.use(indexRoutes);
-        this.app.use(productRoutes);
+        this.app.use('/', indexRoutes);
+        this.app.use('/producto', productRoutes);
     }
 
     start(): void{
