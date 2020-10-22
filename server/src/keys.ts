@@ -1,6 +1,4 @@
-
-   export default {
-
+export default {
      database: {
          host: 'bdlzumobxhd8ykfzt5qe-mysql.services.clever-cloud.com',
          user: 'uykrvkoavvc0kynv',

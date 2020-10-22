@@ -15,10 +15,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const database_1 = __importDefault(require("../database"));
 class ProductController {
     list(req, res) {
-        return __awaiter(this, void 0, void 0, function* () {
-            const lP = yield database_1.default.query('SELECT * FROM Producto');
-            res.json(lP);
-        });
+        const lP = database_1.default.query('SELECT * FROM Producto');
+        res.json(lP);
     }
     getOne(req, res) {
         res.json({ text: 'Se cargo un solo producto ' + req.params.id });

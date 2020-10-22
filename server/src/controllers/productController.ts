@@ -4,9 +4,10 @@ import pool from '../database';
 
 class ProductController {
 
-    public async list(req: Request, res: Response): Promise<void> {
-       const lP =  await pool.query('SELECT * FROM Producto');
-        res.json(lP);
+    public  list(req: Request, res: Response) {
+       const lP =  pool.query('SELECT * FROM Producto');
+       res.json(lP);
+        
     }
 
     public getOne(req:Request, res:Response){
